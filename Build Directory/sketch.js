@@ -46,10 +46,10 @@ function draw() {
   let r1y1 = mouseY - 75
   let r1x2 = mouseX + 50
   let r1y2 = mouseY + 75
-  let r2x1 = window.innerWidth/2 + 75
-  let r2y1 = window.innerHeight/2 + 50
-  let r2x2 = window.innerWidth/2 - 75
-  let r2y2 = window.innerHeight/2 - 50
+  let r2x1 = window.innerWidth/2 - 75
+  let r2y1 = window.innerHeight/2 - 50
+  let r2x2 = window.innerWidth/2 + 75
+  let r2y2 = window.innerHeight/2 + 50
   
  
   rect(r2x1, r2y1, Math.abs(r2x1 - r2x2), Math.abs(r2y1 - r2y2))
