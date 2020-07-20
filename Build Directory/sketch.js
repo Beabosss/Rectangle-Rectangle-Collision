@@ -1,6 +1,8 @@
 function setup() {
-  createCanvas(750, 750);
+  createCanvas(window.innerWidth, window.innerHeight);
 }
+
+window.addEventListener("resize", setup);
 
 function collidePointRect(px, py, rx1, ry1, rx2, ry2){
   if (px >= rx1 && px <= rx1 + Math.abs(rx1 - rx2) && py >= ry1 && py <= ry1 + Math.abs(ry1 - ry2)){
@@ -40,14 +42,14 @@ function collideRectRect(r1x1, r1y1, r1x2, r1y2, r2x1, r2y1, r2x2, r2y2){
 
 function draw() {
   background(220);
-  let r1x1 = mouseX
-  let r1y1 = mouseY
-  let r1x2 = mouseX + 100
-  let r1y2 = mouseY + 150
-  let r2x1 = 300
-  let r2y1 = 300
-  let r2x2 = 400
-  let r2y2 = 400
+  let r1x1 = mouseX - 50
+  let r1y1 = mouseY - 75
+  let r1x2 = mouseX + 50
+  let r1y2 = mouseY + 75
+  let r2x1 = window.innerWidth/2 + 75
+  let r2y1 = window.innerHeight/2 + 50
+  let r2x2 = window.innerWidth/2 - 75
+  let r2y2 = window.innerHeight/2 - 50
   
  
   rect(r2x1, r2y1, Math.abs(r2x1 - r2x2), Math.abs(r2y1 - r2y2))
